@@ -1,0 +1,13 @@
+query GetStations {
+  _service {
+    sdl
+  }
+  getAllChargePoints {
+    stationName
+    location
+    availableChargePoints
+    totalChargePoints
+    isFavourite
+    distance
+  }
+}

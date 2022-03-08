@@ -1,0 +1,12 @@
+type ChargePoint {
+  stationName: String
+  location: String
+  availableChargePoints: String
+  totalChargePoints: String
+  isFavourite: Boolean
+  distance: String
+}
+
+type Query {
+  getAllChargePoints: [ChargePoint]
+}

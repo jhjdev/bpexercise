@@ -1,0 +1,26 @@
+{
+  "name": "chargepoint_service",
+  "version": "1.0.0",
+  "description": "BP Pulse EV Code Exercise - Service Sample",
+  "main": "index.js",
+  "scripts": {
+    "start": "ts-node index.ts",
+    "stop": "npx kill-port 4010"
+  },
+  "keywords": [],
+  "author": "BP Pulse EV",
+  "license": "ISC",
+  "dependencies": {
+    "@apollo/federation": "^0.33.3",
+    "apollo-server-core": "^3.4.0",
+    "apollo-server-express": "^3.4.0",
+    "express": "^4.17.1",
+    "graphql": "^15.6.1",
+    "graphql-request": "^3.6.1",
+    "schemaglue": "^4.3.0",
+    "ts-node": "^10.4.0"
+  },
+  "devDependencies": {
+    "typescript": "^4.4.4"
+  }
+}
