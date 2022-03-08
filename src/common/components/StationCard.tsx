@@ -37,6 +37,7 @@ const StationCard: React.FC<Props> = ({data}) => {
                 )}
               </Text>
             </Text>
+            <View style={styles.station}>{data.location}</View>
           </View>
           <View style={styles.distance}>
             <Text style={styles.imageArrow}>
