@@ -13,6 +13,20 @@ interface Props {
 }
 
 const StationCard: React.FC<Props> = ({data}) => {
+  let distance: string = data.distance!;
+  const num = distance.replace(/[^0-9]/g, '');
+  const stringToNumber = parseInt(num, 10);
+  const formatCash = (n: number) => {
+    if (n < 1e3) {
+      return n;
+    }
+    if (n >= 1e3) {
+      return +(n / 1e3).toFixed();
+    }
+  };
+
+  //console.log(formatCash(2500));
+
   return (
     <View style={styles.container}>
       <>
@@ -24,20 +38,14 @@ const StationCard: React.FC<Props> = ({data}) => {
             <Text style={styles.text}>{'Available'}</Text>
           </View>
           <View style={styles.station}>
-            <Text style={styles.text}>
-              {data.stationName}
-              <Text style={styles.image}>
-                {!data.isFavourite ? (
-                  <Image
-                    source={require('../../images/icons8-star-48.png')}
-                    style={styles.image}
-                  />
-                ) : (
-                  ''
-                )}
-              </Text>
-            </Text>
-            <View style={styles.station}>{data.location}</View>
+            <Text style={styles.text}>{data.stationName}</Text>
+            {!data.isFavourite ? (
+              <Image
+                source={require('../../images/icons8-star-48.png')}
+                style={styles.image}
+              />
+            ) : null}
+            <Text style={styles.stationData}>{data.location}</Text>
           </View>
           <View style={styles.distance}>
             <Text style={styles.imageArrow}>
@@ -46,7 +54,7 @@ const StationCard: React.FC<Props> = ({data}) => {
                 style={styles.image}
               />
             </Text>
-            <Text style={styles.text}>{data.distance + 'km'}</Text>
+            <Text style={styles.text}>{formatCash(stringToNumber) + 'km'}</Text>
           </View>
         </View>
       </>
@@ -68,7 +76,7 @@ const styles = StyleSheet.create({
     borderWidth: 2,
     flexDirection: 'row',
   },
-  image: {width: 20, height: 20},
+  image: {width: 20, height: 20, position: 'absolute', right: 40, top: -2},
   imageArrow: {width: 20, height: 20, marginLeft: 20},
   details: {
     marginLeft: 8,
@@ -87,6 +95,12 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     flexGrow: 2,
     width: '50%',
+    position: 'relative',
+  },
+  stationData: {
+    justifyContent: 'space-between',
+    width: '100%',
+    position: 'relative',
   },
   distance: {
     marginLeft: 8,
