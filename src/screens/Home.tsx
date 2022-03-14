@@ -14,7 +14,7 @@ const Home = () => {
 
   if (loading) {
     return (
-      <View style={styles.container}>
+      <View testID="progress" style={styles.container}>
         <ActivityIndicator color="#32B768" size="large" />
       </View>
     );
@@ -36,9 +36,10 @@ const Home = () => {
   };
 
   return (
-    <View style={styles.container}>
+    <View style={styles.container} testID="container">
       <FlatList
         data={data?.getAllChargePoints}
+        initialNumToRender={5}
         ListHeaderComponent={ListHeader}
         renderItem={({item}) => <StationCard data={item as ChargePoint} />}
         contentContainerStyle={styles.stationList}
