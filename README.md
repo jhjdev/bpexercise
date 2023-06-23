@@ -1,4 +1,4 @@
-# BP Service Stations Tracker Example App
+# BP Chargepoints Service Station Tracker Example App
 
 ## Tech Stack
 
