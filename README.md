@@ -1,4 +1,4 @@
-# BPexercise
+# BP Service Stations Tracker Example App
 
 ## Tech Stack
 
@@ -11,13 +11,13 @@
 Clone the project
 
 ```bash
-  git clone https://github.com/jhjdev/bpexercise
+git clone https://github.com/jhjdev/bpexercise
 ```
 
 Go to the project directory
 
 ```bash
-  cd bpexercise
+cd bpexercise
 ```
 
 Install dependencies
@@ -36,15 +36,15 @@ npm install
 Build for Android
 
 ```bash
-  cd android
-  ./gradlew clean
+cd android
+./gradlew clean
 ```
 
 Build for ios
 
 ```bash
-  cd ios
-  pod install
+cd ios
+pod install
 ```
 
 Start the API
@@ -59,13 +59,13 @@ Start Metro Bundler
 yarn start
 ```
 
-Run for iOS
+Start the iOS Simulator
 
 ```bash
 yarn ios
 ```
 
-Run for android
+Start the Android Emulator
 
 ```bash
 yarn android
