@@ -1,64 +1,72 @@
 # BPexercise
 
+## Tech Stack
 
-## Tech Stack  
-**Client:** React Native, TypeScript 
+**Client:** React Native, TypeScript
 
-**Server:** Node, Express, GraphQL  
+**Server:** Node, Express, GraphQL
 
-## Run Locally  
-Clone the project  
+## Run Locally
 
-~~~bash  
+Clone the project
+
+```bash
   git clone https://github.com/jhjdev/bpexercise
-~~~
+```
 
-Go to the project directory  
+Go to the project directory
 
-~~~bash  
+```bash
   cd bpexercise
-~~~
+```
 
-Install dependencies  
+Install dependencies
 
-~~~bash  
+```bash
 yarn
-~~~
+```
 
-Build for Android 
+Install the GraphQL API
 
-~~~bash  
+```bash
+cd chargepoint-server
+npm install
+```
+
+Build for Android
+
+```bash
   cd android
   ./gradlew clean
-~~~
+```
 
 Build for ios
 
-~~~bash  
+```bash
   cd ios
   pod install
-~~~
+```
 
-Start the API 
+Start the API
 
-~~~bash  
+```bash
 yarn api
-~~~  
+```
 
 Start Metro Bundler
 
-~~~bash  
+```bash
 yarn start
-~~~ 
+```
 
 Run for iOS
 
-~~~bash  
+```bash
 yarn ios
-~~~ 
+```
 
 Run for android
 
-~~~bash  
+```bash
 yarn android
-~~~ 
+```
