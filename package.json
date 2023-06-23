@@ -2,14 +2,13 @@
   "name": "bpexercise",
   "version": "0.0.1",
   "private": true,
-  "homepage": "./",
   "scripts": {
-    "android": "react-native run-android",
-    "ios": "react-native run-ios",
-    "start": "react-native start",
-    "test": "jest",
-    "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
-    "gen-graphql": "graphql-codegen --config codegen.yml"
+    "android": "npx react-native run-android",
+    "ios": "npx react-native run-ios",
+    "api": "npm start --prefix chargepoint-server",
+    "lint": "eslint .",
+    "start": "npx react-native start",
+    "test": "jest"
   },
   "dependencies": {
     "@apollo/client": "^3.5.10",
@@ -22,36 +21,36 @@
     "graphql": "^16.3.0",
     "graphql-request": "^3.6.1",
     "graphql-tag": "^2.12.6",
-    "react": "17.0.2",
+    "react": "18.2.0",
     "react-apollo": "^1.4.14",
-    "react-native": "0.67.3",
+    "react-native": "0.71.11",
     "schemaglue": "^4.3.0",
     "ts-node": "^10.4.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.12.9",
-    "@babel/runtime": "^7.12.5",
+    "@babel/preset-env": "^7.20.0",
+    "@babel/runtime": "^7.20.0",
     "@graphql-codegen/cli": "2.6.2",
     "@graphql-codegen/fragment-matcher": "3.2.1",
     "@graphql-codegen/typescript": "2.4.5",
     "@graphql-codegen/typescript-operations": "2.3.2",
     "@graphql-codegen/typescript-react-apollo": "3.2.8",
-    "@react-native-community/eslint-config": "^2.0.0",
+    "@react-native-community/eslint-config": "^3.2.0",
     "@testing-library/jest-native": "^4.0.4",
-    "@types/jest": "^26.0.23",
+    "@tsconfig/react-native": "^2.0.2",
+    "@types/jest": "^29.2.1",
+    "@types/react": "^18.0.24",
     "@types/react-native": "^0.66.15",
-    "@types/react-test-renderer": "^17.0.1",
+    "@types/react-test-renderer": "^18.0.0",
     "@typescript-eslint/eslint-plugin": "^5.7.0",
     "@typescript-eslint/parser": "^5.7.0",
-    "babel-jest": "^26.6.3",
-    "eslint": "^7.14.0",
-    "jest": "^26.6.3",
-    "metro-react-native-babel-preset": "^0.66.2",
-    "react-test-renderer": "17.0.2",
-    "typescript": "^4.4.4"
-  },
-  "resolutions": {
-    "@types/react": "^17"
+    "babel-jest": "^29.2.1",
+    "eslint": "^8.19.0",
+    "jest": "^29.2.1",
+    "metro-react-native-babel-preset": "0.73.10",
+    "prettier": "^2.4.1",
+    "react-test-renderer": "18.2.0",
+    "typescript": "4.8.4"
   },
   "jest": {
     "preset": "react-native",
@@ -70,5 +69,5 @@
       "./node_modules/react-native-gesture-handler/jestSetup.js"
     ]
   },
-  "packageManager": "yarn@3.2.0"
+  "packageManager": "yarn@3.6.0"
 }
